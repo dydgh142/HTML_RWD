@@ -1,5 +1,13 @@
 @import url(./grid.css);
 @import url(./normalize.css);
-@import url(./a11y.css);
+/* 접근성 */
+@import url(./a11y.css);        
 @import url(./theme.css);
+/* 기본세팅 */
 @import url(./base.css);
+
+
+body{
+    background-color: var(--orange);
+}
+
