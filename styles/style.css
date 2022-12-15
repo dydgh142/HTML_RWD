@@ -6,8 +6,28 @@
 /* 기본세팅 */
 @import url(./base.css);
 
+/* @media 없으면  공통 스타일  @@@@@@@@@@@*/
+
 
 body{
     background-color: var(--orange);
+}
+
+
+
+@media (min-width:320px) and (max-width: 768px){
+    body{
+        background-color: var(--blue);
+
+    }
+}
+
+
+
+/* 중단점 - 769px 이상 */
+@media (min-width:769px){
+    body{
+        background-color: var(--green);
+    }
 }
 
