@@ -302,27 +302,15 @@ input[type="search"] {
 
   /* 데스크탑 메인콘텐츠 */
   .appMain{
-    width: var(--container-width);
+    max-width: var(--container-width);
     margin: 0 auto;
     border: 5px solid red;
+
     grid-template-columns: repeat(12, 1fr);
-    grid-template-rows: auto;
-    gap: 12px;
-  }
-  .book{
-    grid-area: 2/1/4/5;
-  }
-  .news{
-    grid-area: 1/1/2/13;
-  }
-  .board{
-    grid-area: 3/6/4/13;
-  }
-  .favorite{
-    grid-area: 2/10/3/13;
-  }
-  .twitter{
-    grid-area: 2/5/3/10;
+    grid-template-areas: 
+    "news news news news news news news news news news news news"
+    "book book book book twitter twitter twitter twitter twitter favorite favorite favorite"
+    "book book book book . board board board board board board board ";
   }
 
 }
