@@ -212,12 +212,50 @@ input[type="search"] {
 }
 
 
-
 /* 공통 게시판 */
 .board{
   /* background: lightsalmon; */
   grid-area: board;
+  display: flex;
+  flex-flow: row wrap;
 }
+
+.board__title{
+  
+  flex: 1 1 0;
+}
+
+.board__list{
+
+  order: 1;
+  flex: 1 1 auto;
+}
+
+.board__item{
+
+  display: flex;
+  flex-flow: row nowrap;
+  margin-bottom: 5px;
+}
+
+.board__link{
+  flex: 1 1 auto;
+
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.board__date{
+  /* 컨텐츠 크기만큼 지정 (날짜 줄바꿈 방지) */
+  flex: 0 0 auto;
+}
+
+.board__more{
+  
+  line-height: 30px;
+}
+
 /* 공통 즐찾 */
 .favorite{
   /* background: aquamarine; */
@@ -346,7 +384,17 @@ input[type="search"] {
                           "twitter";
   }
 
-  /* 모바일새소식 */
+  /* 모바일 인기 사이트 */
+  .favorite__item{
+    margin-top: var(--spacing-sm);
+  }
+
+  .favorite__link::after{
+    content: attr(data-tooltip);
+    color: var(--accent-favorite);
+    font-size: var(--text-sm);
+    margin-left: var(--spacing-xs);
+  }
   
 }
 

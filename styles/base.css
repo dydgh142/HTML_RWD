@@ -34,10 +34,6 @@ video {
 }
 
 /* 반응형 Iframe */
-.news__videoContainer{
-  width: auto;
-}
-
 .iframeWrapper{
   position: relative;
 }
