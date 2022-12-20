@@ -4,6 +4,11 @@
 @import url(./theme.css);
 @import url(./base.css);
 
+/* 공통 아이콘 (Font Awesome) */
+.far, .fas{
+  margin-right: var(--spacing-xs);
+}
+
 /* 모든 디바이스 (All Device) */
 /* 공통 헤더 */
 .appHeader {
@@ -97,7 +102,6 @@ input[type="search"] {
   display: grid;
   gap: var(--spacing-base);
   padding: var(--spacing-base) var(--spacing-lg);
-  background-color: antiquewhite;
 }
 
 /* 공통 메인 콘텐츠 섹션 제목 */
@@ -115,8 +119,8 @@ input[type="search"] {
 }
 
 .sprite{
-  color: white;
-  background: blue url(./../images/sprite_main.png) no-repeat;
+  color: black;
+  background:url(./../images/sprite_main.png) no-repeat;
   height: 3.75rem;
   padding-left: 64px;
 }
@@ -157,16 +161,58 @@ input[type="search"] {
   color: var(--accent-twitter);
 }
 
+/* 공통 메인 콘텐츠 섹션 본문 */
+.appMain [class*="__summary"]{
+  line-height: 1.6;
+  margin-top: var(--spacing-base);
+}
+
 /* 공통 추천 서적 */
 .book{
-  /* background: lightgreen; */
   grid-area: book;
 }
+
+.book__cover{  /* figure*/
+  width: 80%;
+  margin: 0 auto;
+  text-align: center;
+}
+
+.book__coverCaption{
+  margin-top: var(--spacing-sm);
+  line-height: 1.6;
+}
+
+.book__info{
+    text-align: center;
+    margin-top: var(--spacing-base);
+}
+
+.book__info *{
+  display: inline;
+}
+
+.ratingStar{
+  display: block;
+
+}
+
+
 /* 공통 새소식 */
 .news{
   /* background: yellow; */
   grid-area: news;
 }
+
+.news__date{
+  background-color: lightgreen;
+  display: block;
+  margin-top: var(--spacing-base);
+  text-align: right;
+}
+
+
+
 /* 공통 게시판 */
 .board{
   /* background: lightsalmon; */
@@ -361,8 +407,6 @@ input[type="search"] {
   .appMain{
     max-width: var(--container-width);
     margin: 0 auto;
-    border: 5px solid red;
-
     grid-template-columns: repeat(12, 1fr);
     grid-template-rows: auto;
     grid-template-areas: 
